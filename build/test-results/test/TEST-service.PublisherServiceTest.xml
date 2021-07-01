@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="service.PublisherServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-01T18:56:41" hostname="ductn-VivoBook-ASUSLaptop-X570ZD-F570ZD" time="0.046">
+  <properties/>
+  <testcase name="testFinById()" classname="service.PublisherServiceTest" time="0.036"/>
+  <testcase name="testFindAll()" classname="service.PublisherServiceTest" time="0.003"/>
+  <testcase name="testFindAllByName()" classname="service.PublisherServiceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

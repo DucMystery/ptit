@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Stores</title>
+</head>
+<body>
+<h1>Stores</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+    </tr>
+    <th:block th:each="store : ${stores}">
+        <tr>
+            <td><a th:href="@{/store/__${store.id}__}" th:text="${store.name}"></a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

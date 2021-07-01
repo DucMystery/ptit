@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table table-hover">
+  <thead>
+  <tr>
+
+    <th>#</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th class="text-center">Amount</th>
+    <th class="text-center">Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="store,rowStart:${cart.stores}">
+    <td class="text-center" th:text="${rowStart.count}"></td>
+    <td class="text-center" th:text="${store.name}"></td>
+    <td class="text-center" th:text="${store.price}+ 'VND'"></td>
+    <td class="text-center" th:text="${store.amount}"></td>
+    <td class="text-center" th:text="${store.total}+' VND'"></td>
+  </tr>
+  <tr>
+    <td>   </td>
+    <td>   </td>
+    <td class="text-right"><h4><strong>Total: </strong></h4></td>
+    <td class="text-center text-danger"><h4><strong th:text="${cart.total}+' VND'"></strong></h4></td>
+  </tr>
+
+  <tr>
+    <td>   </td>
+    <td>   </td>
+    <td class="text-right"><form th:action="@{/store/update}" method="post"><input type="submit" value="Xuất hóa đơn"></form></td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+</body>
+</html>

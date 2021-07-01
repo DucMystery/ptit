@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Publishers</title>
+</head>
+<body>
+<h1>Publishers</h1>
+
+<form method="post" th:action="@{/publisher/store-list/}">
+    Search by name:
+    <input name="s" type="text"/>
+    <input name="id" type="hidden" th:value="*{id}"/>
+    <input type="submit" value="Search"/>
+</form><br/>
+
+<form method="get" th:action="@{/store/export-cart}">
+    <input type="submit" value="Xuất Hóa Đơn">
+</form>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Total</th>
+    </tr>
+    <th:block th:each="store : ${stores}">
+        <tr>
+            <td th:text="${store.name}"></td>
+            <td th:text="${store.price}+' VND'"></td>
+            <td th:text="${store.amount}"></td>
+            <td th:text="${store.price * store.amount}+' VND'"></td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
